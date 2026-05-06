@@ -269,14 +269,29 @@ button { font: inherit; }
 .sh__cta .line-icon { width: 17px; height: 17px; }
 
 /* ===========================================================
-   HERO — magazine-style replica of attached comp
+   HERO — full-bleed comp image
    =========================================================== */
 .hero {
   position: relative;
-  padding: 24px 0 40px;
+  padding: 0 0 30px;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(165deg, #fef5e9 0%, #f7e3d2 65%, #f4d8c5 100%);
+  background: linear-gradient(180deg, #fef5e9 0%, #f7e3d2 100%);
+}
+
+.hero__visual {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg, #f7d4b5 0%, #f4cdaa 100%);
+}
+.hero__visual-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
 .hero__bg {
@@ -557,7 +572,7 @@ button { font: inherit; }
   position: relative;
   z-index: 1;
   max-width: var(--container-max);
-  margin: 30px auto 0;
+  margin: 36px auto 0;
   padding: 0 var(--container-pad);
   text-align: center;
 }
