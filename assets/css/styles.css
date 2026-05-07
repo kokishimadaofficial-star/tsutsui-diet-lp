@@ -2014,6 +2014,89 @@ button { font: inherit; }
 }
 
 /* ===========================================================
+   Problems list — icon variant (per-item visual)
+   =========================================================== */
+.problems__list--icons {
+  margin-top: 24px;
+  gap: 12px;
+}
+.problems__list--icons .problems__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--accent-light);
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--ink);
+  min-width: 0;
+}
+.problems__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.65;
+  display: block;
+}
+.problems__list--icons .problems__item:hover {
+  transform: translateX(2px);
+  box-shadow: 0 6px 20px rgba(201, 72, 90, 0.10);
+}
+.problems__list--icons .problems__item strong {
+  color: var(--accent);
+  font-weight: 900;
+  background: linear-gradient(transparent 65%, rgba(245, 216, 211, 0.85) 65%);
+  padding: 0 2px;
+}
+
+.problems__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff5ec 0%, #fae0ce 100%);
+  border-radius: 14px;
+  border: 1px solid var(--accent-light);
+  flex-shrink: 0;
+}
+.problems__icon svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+/* Hide the legacy check icon when in icon-list mode */
+.problems__list--icons .problems__check {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .problems__list--icons .problems__item {
+    grid-template-columns: 64px 1fr;
+    padding: 16px 22px;
+    font-size: 16px;
+    gap: 16px;
+  }
+  .problems__icon {
+    width: 64px;
+    height: 64px;
+  }
+  .problems__icon svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ===========================================================
    Problems answer (added below illustration)
    =========================================================== */
 .problems__answer {
