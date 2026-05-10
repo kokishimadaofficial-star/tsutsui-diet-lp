@@ -1278,6 +1278,410 @@ button { font: inherit; }
 }
 
 /* ===========================================================
+   DREAM — “キレイになったね！”って褒められる未来
+   =========================================================== */
+.dream {
+  position: relative;
+  padding: 70px 0 80px;
+  background: linear-gradient(180deg, #fef3e7 0%, #fce0d3 100%);
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.dream__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.42em;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+.dream__eyebrow-dots {
+  font-size: 9px;
+  color: var(--accent-soft);
+  letter-spacing: 0.3em;
+}
+.dream__title {
+  font-family: var(--serif);
+  margin: 0 0 28px;
+  line-height: 1.4;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.dream__title-pre {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.dream__title-num {
+  font-size: 1.8em;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  margin: 0 4px;
+}
+.dream__title-main {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.dream__title-em {
+  display: inline-block;
+  color: var(--accent);
+  background: linear-gradient(transparent 60%, #ffe066 60%);
+  padding: 0 6px;
+  font-weight: 900;
+  font-size: 1.1em;
+}
+.dream__title-suf {
+  display: block;
+  font-size: 18px;
+  color: var(--ink);
+  font-weight: 700;
+}
+.dream__illust {
+  margin: 8px auto 28px;
+  max-width: 460px;
+}
+.dream__illust svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 30px rgba(201, 72, 90, 0.16));
+}
+.dream__lead {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--ink);
+  margin: 0 0 28px;
+  font-weight: 700;
+}
+.dream__lead strong {
+  color: var(--accent);
+  font-weight: 900;
+  background: linear-gradient(transparent 65%, #ffe066 65%);
+  padding: 0 4px;
+}
+.dream__cta { display: inline-flex; }
+@media (min-width: 480px) {
+  .dream__title-pre { font-size: 22px; }
+  .dream__title-main { font-size: 32px; }
+  .dream__title-suf { font-size: 20px; }
+}
+
+/* ===========================================================
+   WORRY RANKING (お悩みランキング)
+   =========================================================== */
+.ranking {
+  padding: var(--section-py) 0;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  text-align: center;
+}
+.ranking__eyebrow {
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+.ranking__title {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--ink);
+  margin: 0 0 18px;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.ranking__title-em {
+  color: var(--accent);
+  background: linear-gradient(transparent 65%, #ffe066 65%);
+  padding: 0 6px;
+}
+.ranking__lead {
+  font-family: var(--serif);
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin: 0 0 38px;
+  font-weight: 600;
+}
+.ranking__lead strong { color: var(--accent); font-weight: 800; }
+
+.ranking__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+.ranking__item {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 18px;
+  background: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--accent-light);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.ranking__item:nth-child(1) { border-color: #d4a64f; box-shadow: 0 8px 22px rgba(212, 166, 79, 0.20); }
+.ranking__item:nth-child(2) { border-color: #b9bfc7; }
+.ranking__item:nth-child(3) { border-color: #c19a6b; }
+
+.ranking__num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-weight: 900;
+  width: 76px;
+  height: 76px;
+  color: var(--ink);
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(135deg, #fff5ec 0%, #fae0ce 100%);
+  border: 2px solid var(--accent-light);
+}
+.ranking__item:nth-child(1) .ranking__num {
+  background: linear-gradient(135deg, #fff7d9 0%, #f5d796 50%, #d4a64f 100%);
+  border-color: #d4a64f;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.18);
+}
+.ranking__item:nth-child(2) .ranking__num {
+  background: linear-gradient(135deg, #f7f7f7 0%, #d6d6d6 50%, #a6a6a6 100%);
+  border-color: #a6a6a6;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.16);
+}
+.ranking__item:nth-child(3) .ranking__num {
+  background: linear-gradient(135deg, #f5dcc8 0%, #d4a684 50%, #a06d40 100%);
+  border-color: #a06d40;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.16);
+}
+.ranking__num small { font-size: 10px; letter-spacing: 0.04em; line-height: 1; }
+.ranking__num b { font-size: 30px; line-height: 1; margin: 2px 0; }
+
+.ranking__body { min-width: 0; }
+.ranking__name {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 8px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+.ranking__bar {
+  display: block;
+  width: 100%;
+  height: 8px;
+  background: rgba(201, 72, 90, 0.10);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0 0 4px;
+}
+.ranking__bar-fill {
+  display: block;
+  height: 100%;
+  width: var(--w, 0);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-deep) 100%);
+  border-radius: 999px;
+}
+.ranking__item:nth-child(1) .ranking__bar-fill { background: linear-gradient(90deg, #f5b542 0%, #d4a64f 100%); }
+.ranking__pct {
+  font-family: var(--serif);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.ranking__note {
+  margin: 28px 0 0;
+  font-size: 11px;
+  color: var(--ink-mute);
+}
+
+@media (min-width: 480px) {
+  .ranking__title { font-size: 36px; }
+  .ranking__name { font-size: 17.5px; }
+}
+
+/* ===========================================================
+   ANXIETY (どうして無料？) — Q&A list
+   =========================================================== */
+.anxiety {
+  position: relative;
+  padding: var(--section-py) 0;
+  background: linear-gradient(180deg, var(--bg-card) 0%, #fdf3e8 100%);
+  overflow: hidden;
+  isolation: isolate;
+}
+.anxiety__decor {
+  position: absolute;
+  top: 32px; right: -40px;
+  width: 180px; height: 180px;
+  opacity: 0.08;
+  z-index: -1;
+}
+.anxiety__eyebrow {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 18px;
+  letter-spacing: 0.06em;
+}
+.anxiety__title {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 900;
+  color: var(--ink);
+  margin: 0 0 22px;
+  letter-spacing: 0.04em;
+}
+.anxiety__title-em {
+  color: var(--accent);
+  font-size: 1.4em;
+  background: linear-gradient(transparent 65%, #ffe066 65%);
+  padding: 0 6px;
+  font-weight: 900;
+}
+.anxiety__lead {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink-soft);
+  margin: 0 0 40px;
+  font-weight: 600;
+}
+
+.anxiety__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 0 36px;
+}
+.anxiety__qa {
+  background: var(--bg-card);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid var(--accent-light);
+  box-shadow: var(--shadow-sm);
+}
+.anxiety__q {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 20px 22px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  color: #fff;
+  position: relative;
+}
+.anxiety__q-mark {
+  flex-shrink: 0;
+  width: 38px; height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffe066;
+  color: var(--accent-deep);
+  border-radius: 50%;
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 22px;
+  border: 2px solid #fff;
+}
+.anxiety__q h3 {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+.anxiety__a {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 22px 22px;
+}
+.anxiety__a-mark {
+  flex-shrink: 0;
+  width: 38px; height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--accent);
+  border-radius: 50%;
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 22px;
+  border: 2px solid var(--accent);
+}
+.anxiety__a p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink);
+  font-weight: 500;
+  flex: 1;
+}
+.anxiety__a strong {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 900;
+  font-family: var(--serif);
+}
+
+.anxiety__close {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 700;
+  padding: 22px 18px;
+  background: var(--bg);
+  border-radius: 14px;
+  border-top: 3px solid var(--accent);
+}
+.anxiety__close strong {
+  color: var(--accent);
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+@media (min-width: 480px) {
+  .anxiety__title { font-size: 36px; }
+  .anxiety__q h3 { font-size: 17.5px; }
+  .anxiety__a p { font-size: 15px; }
+}
+
+/* ===========================================================
    RESULTS — Before/After cards
    =========================================================== */
 .results {
