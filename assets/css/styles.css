@@ -875,6 +875,197 @@ button { font: inherit; }
 }
 
 /* ===========================================================
+   BODY (体型のお悩み) — 猫背・反り腰・ぽっこりお腹
+   =========================================================== */
+.body {
+  position: relative;
+  padding: var(--section-py) 0;
+  background:
+    radial-gradient(ellipse at 30% 0%, rgba(245, 220, 200, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 100%, rgba(232, 196, 175, 0.35) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-card) 0%, #fef3e7 100%);
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.body__decor {
+  position: absolute;
+  width: 200px; height: 200px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(216, 169, 138, 0.20) 0%, rgba(216, 169, 138, 0) 70%);
+  z-index: -1;
+}
+.body__decor--top { top: -60px; left: -60px; }
+.body__decor--bottom { bottom: -60px; right: -60px; }
+
+.body__eyebrow {
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+
+.body__title {
+  font-family: var(--serif);
+  font-size: 28px;
+  line-height: 1.55;
+  font-weight: 900;
+  color: var(--ink);
+  margin: 0 0 26px;
+  letter-spacing: 0.04em;
+}
+.body__title-em {
+  display: inline-block;
+  font-size: 1.18em;
+  color: var(--accent);
+  font-weight: 900;
+}
+.body__title-strong {
+  display: inline-block;
+  color: var(--accent);
+  background: linear-gradient(transparent 65%, #ffe066 65%);
+  padding: 0 6px;
+  font-weight: 900;
+}
+
+.body__lead {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--ink);
+  margin: 0 0 38px;
+  font-weight: 600;
+  padding: 18px 22px;
+  background: var(--bg);
+  border-radius: 14px;
+  border: 1px solid var(--accent-light);
+}
+.body__lead strong { color: var(--accent); font-weight: 800; }
+.body__lead-strong {
+  display: inline-block;
+  color: var(--accent);
+  background: linear-gradient(transparent 65%, #ffe066 65%);
+  padding: 0 4px;
+  font-weight: 900;
+  font-size: 1.05em;
+}
+
+.body__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 0 0 32px;
+  text-align: center;
+}
+.body__item {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 24px 20px 26px;
+  border: 1.5px solid var(--accent-light);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.body__item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+.body__illust {
+  margin: 0 auto 14px;
+  max-width: 160px;
+}
+.body__illust svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 16px rgba(201, 72, 90, 0.12));
+}
+.body__name {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--accent);
+  margin: 0 0 12px;
+  letter-spacing: 0.12em;
+  position: relative;
+  display: inline-block;
+  padding: 4px 22px;
+}
+.body__name::before, .body__name::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 1.5px;
+  background: var(--accent);
+}
+.body__name::before { left: 0; }
+.body__name::after { right: 0; }
+
+.body__desc {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin: 0;
+  font-weight: 600;
+}
+.body__desc strong { color: var(--accent); font-weight: 800; }
+
+.body__bridge {
+  margin: 8px 0 28px;
+  padding: 24px 22px;
+  background: linear-gradient(135deg, var(--accent-deep) 0%, var(--accent) 100%);
+  color: #fff;
+  border-radius: 16px;
+  position: relative;
+  text-align: center;
+}
+.body__bridge-arrow {
+  display: block;
+  font-size: 18px;
+  color: #ffe066;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.body__bridge-text {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.body__bridge-em {
+  display: inline-block;
+  font-size: 1.2em;
+  color: #ffe066;
+  background: rgba(255, 224, 102, 0.18);
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 900;
+}
+
+.body__cta { margin-top: 0; }
+
+@media (min-width: 480px) {
+  .body__title { font-size: 32px; }
+  .body__lead { font-size: 16px; }
+  .body__name { font-size: 26px; }
+  .body__desc { font-size: 15px; }
+  .body__bridge-text { font-size: 19px; }
+}
+
+@media (min-width: 760px) {
+  .body__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+/* ===========================================================
    INSIGHT — 「実は運動で痩せるのは難しい」気づき型
    =========================================================== */
 .insight {
