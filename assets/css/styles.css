@@ -656,7 +656,384 @@ button { font: inherit; }
 }
 
 /* ===========================================================
-   GIFTS — 3 free bonuses, the strongest hook
+   TRUST BANNER — credibility numbers right under hero
+   =========================================================== */
+.trust {
+  padding: 50px 0 56px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(245, 220, 200, 0.6) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  text-align: center;
+  border-top: 1px solid var(--accent-light);
+}
+.trust__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 28px;
+  position: relative;
+}
+.trust__list::before, .trust__list::after {
+  content: "";
+  position: absolute;
+  top: 18%;
+  bottom: 18%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--accent-light), transparent);
+}
+.trust__list::before { left: 33.33%; }
+.trust__list::after  { left: 66.66%; }
+
+.trust__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 4px;
+}
+.trust__num {
+  font-family: var(--serif);
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.trust__num small {
+  font-size: 22px;
+  margin-left: 1px;
+  letter-spacing: 0;
+}
+.trust__label {
+  font-family: var(--serif);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+.trust__label em {
+  font-style: normal;
+  font-size: 9.5px;
+  color: var(--ink-mute);
+  font-weight: 500;
+  display: block;
+  margin-top: 1px;
+}
+
+.trust__lead {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 600;
+  padding: 0 8px;
+}
+.trust__lead strong { color: var(--accent); font-weight: 800; }
+
+@media (min-width: 480px) {
+  .trust__num { font-size: 56px; }
+  .trust__num small { font-size: 28px; }
+  .trust__label { font-size: 13px; }
+  .trust__lead { font-size: 15px; }
+}
+
+/* ===========================================================
+   3 REASONS — compact ordered list with em on key phrase
+   =========================================================== */
+.reasons {
+  padding: var(--section-py) 0;
+  background: var(--bg-card);
+  position: relative;
+}
+.reasons__eyebrow {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 18px;
+  letter-spacing: 0.06em;
+}
+.reasons__title {
+  text-align: center;
+  font-family: var(--serif);
+  margin: 0 0 40px;
+  line-height: 1.3;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.reasons__title-pre {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 800;
+  color: var(--ink-soft);
+}
+.reasons__title-main {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 32px;
+  color: var(--ink);
+}
+.reasons__title-num {
+  font-size: 64px;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: 0;
+}
+
+.reasons__list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.reasons__item {
+  position: relative;
+  padding: 32px 26px 26px;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-soft) 100%);
+  border-radius: 16px;
+  border: 1px solid var(--accent-light);
+  text-align: center;
+}
+.reasons__num {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  color: #fff;
+  border-radius: 50%;
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  border: 4px solid var(--bg-card);
+  box-shadow: 0 6px 16px rgba(184, 50, 63, 0.30);
+}
+.reasons__name {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 12px 0 14px;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+}
+.reasons__name-em {
+  display: inline-block;
+  font-size: 1.25em;
+  color: var(--accent);
+  font-weight: 900;
+  background: linear-gradient(transparent 60%, rgba(245, 216, 211, 0.7) 60%);
+  padding: 0 4px;
+}
+.reasons__desc {
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--ink-soft);
+  margin: 0;
+  font-weight: 500;
+}
+.reasons__desc strong { color: var(--accent); font-weight: 800; }
+
+@media (min-width: 480px) {
+  .reasons__title-main { font-size: 36px; }
+  .reasons__title-num { font-size: 72px; }
+  .reasons__name { font-size: 21px; }
+  .reasons__desc { font-size: 15px; }
+}
+
+/* ===========================================================
+   COURSE — single offer, phone mockup
+   =========================================================== */
+.course {
+  position: relative;
+  padding: 70px 0 80px;
+  background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg-warm) 100%);
+  overflow: hidden;
+  isolation: isolate;
+  text-align: center;
+}
+.course__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(255, 209, 102, 0.18) 0%, transparent 60%);
+}
+
+/* Gold ribbon banner */
+.course__ribbon {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 460px;
+  padding: 22px 28px 26px;
+  margin: 0 0 30px;
+  background:
+    linear-gradient(135deg, #f5d796 0%, #d4a64f 50%, #f5d796 100%);
+  color: var(--ink);
+  border-radius: 4px;
+  font-family: var(--serif);
+  text-align: center;
+  letter-spacing: 0.02em;
+  box-shadow: 0 12px 28px rgba(212, 166, 79, 0.4);
+}
+.course__ribbon::before, .course__ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 28px;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+}
+.course__ribbon::before { left: -22px; clip-path: polygon(0 50%, 100% 0, 100% 100%); }
+.course__ribbon::after  { right: -22px; clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.course__ribbon span {
+  display: block;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+.course__ribbon strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.course__ribbon strong em {
+  font-style: normal;
+  color: var(--accent);
+  font-size: 1.15em;
+  background: linear-gradient(transparent 65%, #ffd166 65%);
+  padding: 0 4px;
+}
+
+/* Phone mockup */
+.course__phone {
+  margin: 0 auto 36px;
+  max-width: 320px;
+  filter: drop-shadow(0 18px 40px rgba(15, 23, 38, 0.18));
+}
+.course__phone-frame {
+  position: relative;
+  background: #1a1f2a;
+  border-radius: 36px;
+  padding: 14px 8px;
+  border: 2px solid #2a3040;
+}
+.course__phone-notch {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 18px;
+  background: #1a1f2a;
+  border-radius: 0 0 14px 14px;
+  z-index: 2;
+}
+.course__phone-screen {
+  background: #fff;
+  border-radius: 26px;
+  overflow: hidden;
+  min-height: 360px;
+}
+.course__phone-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 22px 6px;
+  font-size: 11px;
+  color: var(--ink);
+  font-weight: 700;
+}
+.course__phone-time {
+  background: #06c755;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+.course__phone-status { color: var(--ink-soft); }
+
+.course__phone-body {
+  padding: 28px 18px 32px;
+  border-top: 4px solid var(--accent);
+}
+.course__phone-pre {
+  font-family: var(--serif);
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 14px;
+  letter-spacing: 0.04em;
+}
+.course__phone-title {
+  font-family: var(--serif);
+  margin: 0 0 22px;
+  line-height: 1.45;
+  font-weight: 900;
+  color: var(--ink);
+}
+.course__phone-title-em {
+  display: inline-block;
+  font-size: 22px;
+  background: linear-gradient(transparent 70%, #ffe066 70%);
+  padding: 0 4px;
+  letter-spacing: 0.02em;
+}
+.course__phone-title-strong {
+  display: inline-block;
+  font-size: 32px;
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+.course__phone-title-strong::before {
+  content: "";
+}
+.course__phone-illust {
+  margin-top: 14px;
+}
+.course__phone-illust svg {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.course__cta { width: 100%; max-width: 460px; }
+
+@media (min-width: 480px) {
+  .course__phone { max-width: 360px; }
+  .course__ribbon span { font-size: 19px; }
+  .course__ribbon strong { font-size: 30px; }
+}
+
+/* ===========================================================
+   GIFTS — 3 free bonuses (LEGACY, kept for fallback)
    =========================================================== */
 .gifts {
   position: relative;
