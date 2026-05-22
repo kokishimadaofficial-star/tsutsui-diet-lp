@@ -3874,3 +3874,658 @@ blockquote.profile__quote cite {
   .voice--featured { display: grid; grid-template-columns: 5fr 6fr; }
   .voice--featured .voice__photo img { aspect-ratio: 1/1; height: 100%; }
 }
+
+/* ===========================================================
+   v13 — saga-seitai 教育フロー踏襲版（11セクション）
+   ヒーロー / CTA-block / 未来不安 / 共感 / 先生紹介 / 講座 / ストーリー
+   =========================================================== */
+
+/* ----- §1 HERO v13 ----- */
+.hero-v13 {
+  background:
+    radial-gradient(120% 70% at 50% -10%, var(--accent-light) 0%, var(--bg) 55%) no-repeat,
+    var(--bg);
+  padding: 110px 0 60px;
+  text-align: center;
+  position: relative;
+}
+.hero-v13__eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin: 0 0 24px;
+  padding: 0 8px 6px;
+  border-bottom: 2px solid var(--accent);
+}
+.hero-v13__title {
+  font-family: var(--serif);
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.4;
+  margin: 0 0 28px;
+  letter-spacing: 0.02em;
+}
+.hero-v13__title > span { display: block; }
+.hero-v13__title-pre {
+  display: inline-block !important;
+  font-size: 22px;
+  margin-bottom: 8px;
+  position: relative;
+  padding: 0 22px;
+}
+.hero-v13__title-pre::before,
+.hero-v13__title-pre::after {
+  content: "・・・";
+  color: var(--ink-mute);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+}
+.hero-v13__title-pre::before { left: -34px; }
+.hero-v13__title-pre::after  { right: -34px; }
+.hero-v13__title-main {
+  font-size: 38px;
+  line-height: 1.35;
+}
+.hero-v13__title-cta {
+  font-size: 38px;
+  line-height: 1.35;
+  margin-top: 4px;
+}
+.hero-v13__hl {
+  display: inline-block;
+  background: linear-gradient(transparent 62%, var(--accent-light) 62%);
+  padding: 0 6px;
+  font-size: 1.15em;
+  color: var(--accent-deep);
+}
+.hero-v13__hl-yellow {
+  display: inline-block;
+  background: linear-gradient(transparent 62%, #fff066 62%);
+  padding: 0 6px;
+  color: var(--accent-deep);
+  font-size: 1.1em;
+}
+.hero-v13__lead {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 2.0;
+  margin: 0 0 22px;
+}
+.hero-v13__lead strong { color: var(--accent-deep); font-weight: 800; }
+.hero-v13__banner {
+  display: block;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.55;
+  padding: 18px 16px;
+  margin: 0 0 36px;
+  border-radius: 8px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  box-shadow: 0 12px 28px rgba(201,72,90,0.28);
+}
+.hero-v13__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 0;
+}
+.hero-v13__feature {
+  background: var(--bg-card);
+  border: 2px solid var(--accent-soft);
+  border-radius: 14px;
+  padding: 16px 8px 14px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  box-shadow: var(--shadow-sm);
+}
+.hero-v13__feature p { margin: 0; }
+.hero-v13__feature strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--accent-deep);
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 13.5px;
+  letter-spacing: 0.01em;
+}
+.hero-v13__feature-icon {
+  width: 48px; height: 48px;
+  margin: 0 auto 8px;
+  display: block;
+}
+.hero-v13__feature-icon svg { width: 100%; height: 100%; }
+
+@media (min-width: 600px) {
+  .hero-v13 { padding: 130px 0 80px; }
+  .hero-v13__title-pre { font-size: 26px; }
+  .hero-v13__title-main, .hero-v13__title-cta { font-size: 46px; }
+  .hero-v13__lead { font-size: 16px; }
+  .hero-v13__banner { font-size: 21px; padding: 22px 20px; }
+  .hero-v13__feature { padding: 22px 12px 18px; font-size: 13.5px; }
+  .hero-v13__feature strong { font-size: 15.5px; }
+  .hero-v13__feature-icon { width: 56px; height: 56px; }
+}
+
+/* ----- CTA-block (Hero下/中盤/末尾の繰り返しCTA) ----- */
+.cta-block {
+  background: var(--bg);
+  padding: 28px 0 36px;
+  text-align: center;
+}
+.cta-block .btn { margin: 0 auto; }
+.cta-block__note {
+  margin: 14px 0 0;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+.cta-block__note-mark {
+  color: var(--gold);
+  margin-right: 6px;
+  font-size: 15px;
+}
+.cta-block__note strong {
+  color: var(--accent-deep);
+  font-size: 16px;
+  margin: 0 3px;
+}
+
+/* ----- §3 UNEASE — 暗めの未来不安 ----- */
+.unease {
+  background: var(--bg-dark);
+  color: var(--ink-on-dark);
+  padding: var(--section-py) 0;
+  position: relative;
+  overflow: hidden;
+}
+.unease::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: 0; right: 0;
+  height: 28px;
+  background:
+    radial-gradient(20px 18px at 20px 0, transparent 96%, var(--bg-dark) 97%) repeat-x,
+    var(--bg-dark);
+  background-size: 40px 28px;
+  transform: translateY(-100%);
+  z-index: 1;
+}
+.unease__title {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.55;
+  text-align: center;
+  margin: 0 0 30px;
+  letter-spacing: 0.04em;
+}
+.unease__title span {
+  display: block;
+  font-size: 0.78em;
+  color: var(--ink-on-dark-soft);
+  margin-bottom: 4px;
+}
+.unease__title em {
+  font-style: normal;
+  color: #ffe066;
+  background: linear-gradient(transparent 62%, rgba(255,224,102,0.18) 62%);
+  padding: 0 4px;
+}
+.unease__lead {
+  font-size: 14px;
+  line-height: 2.0;
+  text-align: center;
+  margin: 0 0 26px;
+  color: var(--ink-on-dark-soft);
+}
+.unease__list { margin: 0; }
+.unease__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.unease__check {
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 18px;
+  flex: 0 0 auto;
+}
+
+@media (min-width: 600px) {
+  .unease__title { font-size: 34px; }
+  .unease__title span { font-size: 0.7em; }
+  .unease__lead { font-size: 16px; }
+  .unease__item { font-size: 17px; padding: 16px 22px; }
+}
+
+/* ----- §4 EMPATHY — 段落で重ねる共感 ----- */
+.empathy {
+  background: var(--bg-card);
+  padding: var(--section-py) 0;
+  text-align: center;
+}
+.empathy__lead {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.95;
+  color: var(--ink);
+  margin: 0 0 30px;
+  letter-spacing: 0.02em;
+}
+.empathy__lead strong {
+  color: var(--accent-deep);
+  font-size: 1.15em;
+  font-weight: 900;
+}
+.empathy__methods {
+  margin: 0 0 30px;
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--ink-soft);
+}
+.empathy__methods li { letter-spacing: 0.04em; }
+.empathy__inner {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.8;
+  margin: 0 0 28px;
+}
+.empathy__assure {
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  line-height: 1.9;
+  margin: 0 0 36px;
+}
+.empathy__assure strong {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 18px;
+}
+.empathy__final {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 2.0;
+  color: var(--ink);
+  margin: 0;
+  padding: 26px 14px 8px;
+  border-top: 1px dashed var(--line-color);
+}
+.empathy__highlight {
+  display: inline-block;
+  background: linear-gradient(transparent 62%, #fff066 62%);
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.2em;
+  color: var(--accent-deep);
+  padding: 0 8px;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 600px) {
+  .empathy__lead { font-size: 22px; }
+  .empathy__methods { font-size: 19px; }
+  .empathy__inner { font-size: 22px; }
+  .empathy__assure { font-size: 17px; }
+  .empathy__assure strong { font-size: 20px; }
+  .empathy__final { font-size: 19px; }
+}
+
+/* ----- §5 INTRO — 先生紹介＋約束 ----- */
+.intro {
+  background:
+    linear-gradient(180deg, var(--bg-card) 0%, var(--bg-soft) 100%);
+  padding: var(--section-py) 0 calc(var(--section-py) - 20px);
+  text-align: center;
+}
+.intro__bracket {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 26px;
+  letter-spacing: 0.06em;
+}
+.intro__bracket-em {
+  display: inline-block;
+  position: relative;
+  padding: 0 4px;
+  color: var(--accent-deep);
+}
+.intro__photo {
+  margin: 0 auto 28px;
+  max-width: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 1/1;
+}
+.intro__photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+.intro__lead {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.85;
+  color: var(--ink);
+  margin: 0 0 28px;
+  letter-spacing: 0.02em;
+}
+.intro__lead strong {
+  background: linear-gradient(transparent 62%, #fff066 62%);
+  color: var(--accent-deep);
+  font-size: 1.15em;
+  font-weight: 900;
+  padding: 0 4px;
+}
+.intro__body {
+  font-size: 14.5px;
+  line-height: 2.0;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+.intro__body strong {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+.intro__signature {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.85;
+  margin: 30px 0 0;
+  padding-top: 26px;
+  border-top: 1px dashed var(--line-color);
+  color: var(--ink);
+}
+.intro__signature-main {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--accent-deep);
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: 600px) {
+  .intro__photo { max-width: 320px; }
+  .intro__bracket { font-size: 26px; }
+  .intro__lead { font-size: 22px; }
+  .intro__body { font-size: 16px; }
+  .intro__signature { font-size: 19px; }
+  .intro__signature-main { font-size: 26px; }
+}
+
+/* ----- §7 RESULTS — v13用調整（既存.resultsをそのまま使うが.results__statを追加） ----- */
+.results__stat {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin: 14px auto 14px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 18px rgba(201,72,90,0.28);
+}
+.results__stat strong {
+  font-size: 1.25em;
+  margin: 0 2px;
+}
+.results__detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid var(--line-color);
+}
+.results__detail > div {
+  padding: 14px 10px 12px;
+  text-align: center;
+  border-right: 1px solid var(--line-color);
+}
+.results__detail > div:last-child { border-right: none; }
+.results__detail dt {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+}
+.results__detail dt small {
+  display: block;
+  color: var(--accent-deep);
+  font-size: 11.5px;
+  margin-top: 2px;
+}
+.results__detail dd {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+.results__card { text-align: center; padding-bottom: 4px; }
+
+@media (min-width: 600px) {
+  .results__stat { font-size: 32px; padding: 12px 30px; }
+  .results__detail dt { font-size: 16px; }
+  .results__detail dd { font-size: 17px; }
+}
+
+/* ----- §8 COURSE — LINE講座 中身予告4項目 ----- */
+.course {
+  background: var(--accent);
+  color: #fff;
+  padding: var(--section-py) 0;
+  position: relative;
+}
+.course__title {
+  text-align: center;
+  font-family: var(--serif);
+  font-weight: 800;
+  line-height: 1.55;
+  margin: 0 0 32px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.course__title-pre {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.92;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+.course__title-main {
+  display: block;
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+.course__title-em {
+  display: inline-block;
+  color: #fff066;
+  font-size: 1.1em;
+  padding: 0 4px;
+  letter-spacing: 0.03em;
+}
+.course__title-suf {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 8px;
+  opacity: 0.92;
+}
+.course__list {
+  background: #fff;
+  border-radius: 14px;
+  padding: 26px 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  list-style: none;
+  margin: 0;
+}
+.course__item {
+  position: relative;
+  padding: 16px 0 16px 28px;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.85;
+  color: var(--ink);
+  border-bottom: 1px dashed var(--line-color);
+  letter-spacing: 0.02em;
+}
+.course__item:last-child { border-bottom: none; }
+.course__bullet {
+  position: absolute;
+  left: 0; top: 22px;
+  width: 14px; height: 14px;
+  background: var(--accent);
+  border-radius: 3px;
+  display: block;
+}
+.course__hl {
+  display: inline;
+  background: linear-gradient(transparent 62%, #fff066 62%);
+  padding: 0 4px;
+  font-weight: 900;
+  color: var(--accent-deep);
+}
+
+@media (min-width: 600px) {
+  .course__title-pre { font-size: 21px; }
+  .course__title-main { font-size: 40px; }
+  .course__title-suf { font-size: 20px; }
+  .course__item { font-size: 17px; padding-left: 32px; }
+  .course__bullet { width: 16px; height: 16px; }
+}
+
+/* ----- §10 STORY — 開発ストーリー ----- */
+.story {
+  background: var(--bg-card);
+  padding: var(--section-py) 0;
+  text-align: center;
+}
+.story__banner {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 14px 22px 12px;
+  border-radius: 8px;
+  margin: 0 0 18px;
+  letter-spacing: 0.04em;
+  position: relative;
+}
+.story__banner-pre {
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+.story__banner-main {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.story__banner-main em {
+  font-style: normal;
+  color: #fff066;
+  font-size: 1.4em;
+  margin: 0 2px;
+}
+.story__title {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 26px;
+  letter-spacing: 0.04em;
+}
+.story__title span {
+  background: linear-gradient(transparent 60%, #fff066 60%);
+  padding: 0 8px;
+}
+.story__photo {
+  margin: 0 auto 30px;
+  max-width: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.story__photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4/5;
+}
+.story__body {
+  text-align: left;
+  font-size: 15px;
+  line-height: 2.0;
+  color: var(--ink-soft);
+}
+.story__body p {
+  margin: 0 0 22px;
+  text-align: center;
+}
+.story__body strong {
+  color: var(--accent-deep);
+  font-weight: 800;
+}
+.story__hl {
+  display: inline-block;
+  background: linear-gradient(transparent 62%, #fff066 62%);
+  padding: 0 4px;
+  font-weight: 800;
+  color: var(--accent-deep);
+}
+
+@media (min-width: 600px) {
+  .story__banner { font-size: 19px; padding: 18px 28px 14px; }
+  .story__title { font-size: 32px; }
+  .story__photo { max-width: 280px; }
+  .story__body { font-size: 17px; }
+  .story__body p { margin-bottom: 26px; }
+}
