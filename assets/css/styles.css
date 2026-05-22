@@ -4529,3 +4529,158 @@ blockquote.profile__quote cite {
   .story__body { font-size: 17px; }
   .story__body p { margin-bottom: 26px; }
 }
+
+/* ===========================================================
+   v13.1 — CTA-bridge: saga-seitai風のLINE誘導ブロック
+   金色リボン帯 + 大文字「"無料"LINE講座」 + 赤い下矢印 + LINEボタン
+   =========================================================== */
+.cta-bridge {
+  background: var(--bg-warm);
+  padding: 56px 0 60px;
+  text-align: center;
+  position: relative;
+}
+.cta-bridge--mid {
+  padding: 44px 0 48px;
+  background: var(--bg-soft);
+}
+
+.cta-bridge__banner {
+  display: inline-block;
+  background:
+    linear-gradient(135deg, #f6dca7 0%, #e9c577 30%, #f6dca7 50%, #d4a64f 70%, #c79a5d 100%);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.7;
+  padding: 16px 30px;
+  margin: 0 0 28px;
+  letter-spacing: 0.04em;
+  position: relative;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+  /* リボン両端の凹み（左右に三角の切り欠き） */
+  clip-path: polygon(
+    10px 0,
+    calc(100% - 10px) 0,
+    100% 50%,
+    calc(100% - 10px) 100%,
+    10px 100%,
+    0 50%
+  );
+  max-width: calc(100% - 20px);
+}
+.cta-bridge__banner strong {
+  color: var(--accent-deep);
+  font-size: 1.06em;
+}
+.cta-bridge__hl {
+  display: inline-block;
+  background: #06c755;
+  color: #fff;
+  padding: 1px 9px 2px;
+  border-radius: 4px;
+  font-weight: 900;
+  margin: 0 2px;
+  font-size: 0.95em;
+  letter-spacing: 0.06em;
+}
+.cta-bridge__free {
+  display: inline-block;
+  background: linear-gradient(transparent 58%, #fff066 58%);
+  color: var(--accent-deep);
+  font-weight: 900;
+  font-size: 1.3em;
+  padding: 0 6px;
+  margin: 0 2px;
+}
+.cta-bridge__heart {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 1.05em;
+  margin-left: 3px;
+  transform: translateY(1px);
+}
+
+/* ピッチ：「1週間で1kg痩せる "無料" LINE講座」 */
+.cta-bridge__pitch-wrap {
+  margin: 0 auto 24px;
+  text-align: center;
+}
+.cta-bridge__pitch-lead {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--ink);
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+.cta-bridge__pitch-main {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 36px;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+.cta-bridge__pitch-quote {
+  color: var(--accent);
+  font-size: 0.7em;
+  font-weight: 700;
+  margin: 0 -1px;
+  vertical-align: 6px;
+}
+.cta-bridge__pitch-free {
+  display: inline-block;
+  background: linear-gradient(transparent 55%, #fff066 55%);
+  color: var(--accent-deep);
+  padding: 0 6px;
+  font-size: 1.05em;
+  letter-spacing: 0.04em;
+}
+
+/* 赤い下向き三角矢印 ×3（アニメーションで誘導） */
+.cta-bridge__arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 14px 0 22px;
+}
+.cta-bridge__arrow {
+  width: 0;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 26px solid var(--accent);
+  filter: drop-shadow(0 4px 6px rgba(201,72,90,0.3));
+  opacity: 0.3;
+  animation: bridgeArrow 1.4s ease-in-out infinite;
+}
+.cta-bridge__arrow:nth-child(1) { animation-delay: 0s; }
+.cta-bridge__arrow:nth-child(2) { animation-delay: 0.18s; }
+.cta-bridge__arrow:nth-child(3) { animation-delay: 0.36s; }
+
+@keyframes bridgeArrow {
+  0%, 100% { opacity: 0.3; transform: translateY(-4px); }
+  50%     { opacity: 1;   transform: translateY(2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-bridge__arrow { animation: none; opacity: 0.75; transform: none; }
+}
+
+@media (min-width: 600px) {
+  .cta-bridge { padding: 70px 0 76px; }
+  .cta-bridge--mid { padding: 52px 0 58px; }
+  .cta-bridge__banner { font-size: 18px; padding: 18px 36px; }
+  .cta-bridge__pitch-lead { font-size: 28px; }
+  .cta-bridge__pitch-main { font-size: 48px; }
+  .cta-bridge__arrow {
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    border-top: 32px solid var(--accent);
+  }
+}

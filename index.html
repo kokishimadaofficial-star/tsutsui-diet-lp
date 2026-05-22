@@ -41,84 +41,90 @@
 <main>
 
 <!-- =================================================================== -->
-<!-- §1. HERO                                                            -->
+<!-- §1. HERO — v12形式（hero-main.jpgに画像内コピー焼き込み済み）       -->
 <!-- =================================================================== -->
-<section class="hero-v13" id="hero">
+<section class="hero" id="hero">
+  <div class="hero__visual">
+    <img class="hero__visual-img"
+         src="./assets/images/hero-main.jpg"
+         srcset="./assets/images/hero-main.jpg 1x, ./assets/images/hero-main@2x.jpg 2x"
+         alt="運動なしでも3ヶ月で8キロ。人生最後のダイエット。痩せて当然。大事なのは、リバウンドしない未来。理学療法士が完全監修。"
+         loading="eager"
+         fetchpriority="high" />
+  </div>
+
+  <div class="hero__cta">
+    <a href="https://bor8n9q3.autosns.app/addfriend/s/ulZtCYOmy0/@393uxggf"
+       class="btn btn--line btn--xxl"
+       target="_blank" rel="noopener">
+      <span class="line-icon" aria-hidden="true"></span>
+      <span class="btn__main">無料LINE講座を<br>受け取る</span>
+      <span class="btn__sub">完全無料・30秒・いつでも解除OK</span>
+    </a>
+    <p class="hero__cta-note">
+      <span class="hero__cta-note-mark">★</span>
+      <strong>1,247名</strong>の女性が登録中
+    </p>
+  </div>
+</section>
+
+
+<!-- ============== Trust Banner (実績) ============== -->
+<section class="trust">
   <div class="container">
-
-    <p class="hero-v13__eyebrow reveal">
-      運動しても、食事制限しても、置き換えしても痩せない、<br>
-      リバウンドばっかりとお悩みの方へ
-    </p>
-
-    <h1 class="hero-v13__title reveal">
-      <span class="hero-v13__title-pre">まずは</span>
-      <span class="hero-v13__title-main"><span class="hero-v13__hl">1週間で1kg</span>ほど</span>
-      <span class="hero-v13__title-cta"><span class="hero-v13__hl-yellow">無料</span>で痩せませんか？</span>
-    </h1>
-
-    <p class="hero-v13__lead reveal">
-      ダイエット成功率は<strong>80％越え</strong>、相談実績は<strong>200人以上！</strong>(2023年)の<br>
-      健康に痩せてリバウンドから遠のく<br>
-      <strong>ダイエット整体チームの人気プログラム</strong>の<br>
-      「極意」をぎゅっと詰め込んだ
-    </p>
-
-    <p class="hero-v13__banner reveal">
-      「1週間で1kg痩せる7ステップ」を<br>
-      期間限定、無料で公開！
-    </p>
-
-    <ul class="hero-v13__features reveal">
-      <li class="hero-v13__feature">
-        <div class="hero-v13__feature-icon">
-          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="30" cy="30" r="22" fill="none" stroke="#c9485a" stroke-width="2.5"/>
-            <line x1="14" y1="14" x2="46" y2="46" stroke="#c9485a" stroke-width="3" stroke-linecap="round"/>
-            <line x1="46" y1="14" x2="14" y2="46" stroke="#c9485a" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <p>運動不要、過度な<br><strong>食事制限もなし</strong></p>
+    <ul class="trust__list">
+      <li class="trust__item reveal">
+        <span class="trust__num">95<small>%</small></span>
+        <span class="trust__label">ダイエット<br>成功率</span>
       </li>
-      <li class="hero-v13__feature">
-        <div class="hero-v13__feature-icon">
-          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M30 8 C18 8 10 18 10 30 C10 42 18 52 30 52 C42 52 50 42 50 30" fill="none" stroke="#c9485a" stroke-width="2.5" stroke-linecap="round"/>
-            <text x="30" y="36" text-anchor="middle" font-family="Noto Serif JP, serif" font-weight="800" font-size="14" fill="#c9485a">-8</text>
-          </svg>
-        </div>
-        <p>健康的にキレイに<br><strong>3ヶ月平均−8kg</strong></p>
+      <li class="trust__item reveal">
+        <span class="trust__num">200<small>名+</small></span>
+        <span class="trust__label">相談実績<br><em>(2023年)</em></span>
       </li>
-      <li class="hero-v13__feature">
-        <div class="hero-v13__feature-icon">
-          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M30 8 L36 24 L52 24 L40 34 L44 50 L30 41 L16 50 L20 34 L8 24 L24 24 Z" fill="#c9485a"/>
-          </svg>
-        </div>
-        <p>体質改善ダイエットの<br><strong>「極意」を凝縮</strong></p>
+      <li class="trust__item reveal">
+        <span class="trust__num">-8<small>kg</small></span>
+        <span class="trust__label">3ヶ月<br>平均減量</span>
       </li>
     </ul>
-
+    <p class="trust__lead reveal">
+      健康に痩せてリバウンドから遠のく、<br>
+      <strong>ダイエット整体チームの人気プログラム</strong>の<br>
+      「極意」をぎゅっと詰め込んだ無料LINE講座です。
+    </p>
   </div>
 </section>
 
 
 <!-- =================================================================== -->
-<!-- CTA-1                                                               -->
+<!-- CTA-1 — sagaブリッジ風（金色帯 + 1週間で1kg + 矢印 + LINE）          -->
 <!-- =================================================================== -->
-<section class="cta-block reveal">
+<section class="cta-bridge" id="cta1">
   <div class="container">
+    <p class="cta-bridge__banner reveal">
+      この<strong>3つの特徴</strong>を活かした解決策を<br>
+      <span class="cta-bridge__hl">LINE</span>で<span class="cta-bridge__free">無料</span>配信中です<span class="cta-bridge__heart">♥</span>
+    </p>
+
+    <div class="cta-bridge__pitch-wrap reveal">
+      <p class="cta-bridge__pitch-lead">1週間で1kg痩せる</p>
+      <p class="cta-bridge__pitch-main">
+        <span class="cta-bridge__pitch-quote">"</span><span class="cta-bridge__pitch-free">無料</span><span class="cta-bridge__pitch-quote">"</span>LINE講座
+      </p>
+    </div>
+
+    <div class="cta-bridge__arrows" aria-hidden="true">
+      <span class="cta-bridge__arrow"></span>
+      <span class="cta-bridge__arrow"></span>
+      <span class="cta-bridge__arrow"></span>
+    </div>
+
     <a href="https://bor8n9q3.autosns.app/addfriend/s/ulZtCYOmy0/@393uxggf"
-       class="btn btn--line btn--xxl"
+       class="btn btn--line btn--xxl reveal"
        target="_blank" rel="noopener">
       <span class="line-icon" aria-hidden="true"></span>
-      <span class="btn__main">LINEで無料講座を<br>受け取る</span>
+      <span class="btn__main">LINEで友だち追加</span>
       <span class="btn__sub">完全無料・30秒で登録完了</span>
     </a>
-    <p class="cta-block__note">
-      <span class="cta-block__note-mark">★</span>
-      <strong>1,247名</strong>の女性が登録中
-    </p>
   </div>
 </section>
 
@@ -226,13 +232,24 @@
 <!-- =================================================================== -->
 <!-- CTA-2                                                               -->
 <!-- =================================================================== -->
-<section class="cta-block reveal">
+<section class="cta-bridge cta-bridge--mid">
   <div class="container">
+    <div class="cta-bridge__pitch-wrap reveal">
+      <p class="cta-bridge__pitch-lead">1週間で1kg痩せる</p>
+      <p class="cta-bridge__pitch-main">
+        <span class="cta-bridge__pitch-quote">"</span><span class="cta-bridge__pitch-free">無料</span><span class="cta-bridge__pitch-quote">"</span>LINE講座
+      </p>
+    </div>
+    <div class="cta-bridge__arrows" aria-hidden="true">
+      <span class="cta-bridge__arrow"></span>
+      <span class="cta-bridge__arrow"></span>
+      <span class="cta-bridge__arrow"></span>
+    </div>
     <a href="https://bor8n9q3.autosns.app/addfriend/s/ulZtCYOmy0/@393uxggf"
-       class="btn btn--line btn--xxl"
+       class="btn btn--line btn--xxl reveal"
        target="_blank" rel="noopener">
       <span class="line-icon" aria-hidden="true"></span>
-      <span class="btn__main">LINEで無料講座を<br>受け取る</span>
+      <span class="btn__main">LINEで友だち追加</span>
       <span class="btn__sub">完全無料・30秒で登録完了</span>
     </a>
   </div>
@@ -359,13 +376,24 @@
 <!-- =================================================================== -->
 <!-- CTA-3                                                               -->
 <!-- =================================================================== -->
-<section class="cta-block reveal">
+<section class="cta-bridge cta-bridge--mid">
   <div class="container">
+    <div class="cta-bridge__pitch-wrap reveal">
+      <p class="cta-bridge__pitch-lead">1週間で1kg痩せる</p>
+      <p class="cta-bridge__pitch-main">
+        <span class="cta-bridge__pitch-quote">"</span><span class="cta-bridge__pitch-free">無料</span><span class="cta-bridge__pitch-quote">"</span>LINE講座
+      </p>
+    </div>
+    <div class="cta-bridge__arrows" aria-hidden="true">
+      <span class="cta-bridge__arrow"></span>
+      <span class="cta-bridge__arrow"></span>
+      <span class="cta-bridge__arrow"></span>
+    </div>
     <a href="https://bor8n9q3.autosns.app/addfriend/s/ulZtCYOmy0/@393uxggf"
-       class="btn btn--line btn--xxl"
+       class="btn btn--line btn--xxl reveal"
        target="_blank" rel="noopener">
       <span class="line-icon" aria-hidden="true"></span>
-      <span class="btn__main">LINEで無料講座を<br>受け取る</span>
+      <span class="btn__main">LINEで友だち追加</span>
       <span class="btn__sub">完全無料・30秒で登録完了</span>
     </a>
   </div>
