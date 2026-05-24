@@ -4757,3 +4757,130 @@ blockquote.profile__quote cite {
     border-top: 32px solid var(--accent);
   }
 }
+
+/* ===========================================================
+   Compact unified CTA cards
+   =========================================================== */
+.cta-card {
+  background: var(--bg-soft);
+  padding: 42px 0;
+}
+.cta-card--mid {
+  padding: 36px 0;
+}
+.cta-card--final {
+  background: var(--bg-deep);
+  padding: 44px 0 48px;
+}
+.cta-card__inner {
+  max-width: 360px;
+  margin-inline: auto;
+  padding: 28px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--line-color-soft);
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+.cta-card__pre {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-deep);
+}
+.cta-card__pre strong,
+.cta-card__pre em {
+  color: var(--accent-deep);
+  font-style: normal;
+  font-weight: 800;
+}
+.cta-card__title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.cta-card__title-em {
+  color: var(--accent-deep);
+  font-size: 1.1em;
+}
+.cta-card__sub {
+  margin: 10px 0 16px;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--ink-mute);
+}
+.cta-card__btn {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+}
+.cta-card__btn .line-icon {
+  width: 22px;
+  height: 22px;
+}
+.cta-card__trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 10px;
+  margin-top: 14px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-mute);
+}
+.cta-card__trust li {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.cta-card__trust li::first-letter {
+  color: var(--accent-deep);
+}
+
+@media (min-width: 600px) {
+  .cta-card {
+    padding: 58px 0;
+  }
+  .cta-card--mid {
+    padding: 50px 0;
+  }
+  .cta-card--final {
+    padding: 64px 0 68px;
+  }
+  .cta-card__inner {
+    max-width: 460px;
+    padding: 36px 28px;
+  }
+  .cta-card__pre {
+    font-size: 13px;
+  }
+  .cta-card__title {
+    font-size: 28px;
+  }
+  .cta-card__sub {
+    font-size: 15px;
+    margin: 12px 0 18px;
+  }
+  .cta-card__btn {
+    font-size: 18px;
+    padding: 16px 22px;
+  }
+  .cta-card__trust {
+    font-size: 13px;
+    gap: 8px 14px;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 960px) {
+  .cta-card__inner {
+    max-width: 520px;
+  }
+}
