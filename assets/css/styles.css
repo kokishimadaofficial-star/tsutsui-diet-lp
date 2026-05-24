@@ -67,7 +67,8 @@ button { font: inherit; }
   --shadow-lg: 0 30px 70px rgba(42, 31, 36, 0.18);
 
   /* Typography */
-  --serif: "Shippori Mincho", "Noto Serif JP", "Hiragino Mincho ProN", serif;
+  /* was serif/mincho, now sans-serif to match saga-seitai */
+  --serif: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
 
   /* Layout */
   --container-max: 560px;
