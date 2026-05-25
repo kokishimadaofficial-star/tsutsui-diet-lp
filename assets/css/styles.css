@@ -5093,9 +5093,9 @@ blockquote.profile__quote cite {
   margin: 0 0 22px;
 }
 .cta-result__photo {
-  width: 110px;
-  height: 110px;
-  flex: 0 0 110px;
+  width: 160px;
+  height: 120px;
+  flex: 0 0 160px;
   border: 4px solid #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -5105,7 +5105,8 @@ blockquote.profile__quote cite {
 .cta-result__photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
   display: block;
 }
 .cta-result__badges {
@@ -5184,9 +5185,9 @@ blockquote.profile__quote cite {
     gap: 20px;
   }
   .cta-result__photo {
-    width: 140px;
-    height: 140px;
-    flex-basis: 140px;
+    width: 200px;
+    height: 150px;
+    flex-basis: 200px;
   }
   .cta-result__badge {
     min-width: 146px;
@@ -5216,9 +5217,9 @@ blockquote.profile__quote cite {
     gap: 10px;
   }
   .cta-result__photo {
-    width: 96px;
-    height: 96px;
-    flex-basis: 96px;
+    width: 132px;
+    height: 99px;
+    flex-basis: 132px;
   }
   .cta-result__badge {
     min-width: 112px;
