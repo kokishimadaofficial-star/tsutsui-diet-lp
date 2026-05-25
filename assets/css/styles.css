@@ -5347,3 +5347,130 @@ blockquote.profile__quote cite {
     padding: 16px 22px;
   }
 }
+
+/* ============================================================ */
+/* HERO-BONUS — saga-seitai風 LINE登録特典ブロック               */
+/* ============================================================ */
+
+.hero-bonus {
+  position: relative;
+  margin: 26px auto 0;
+  max-width: 380px;
+  padding: 28px 18px 20px;
+  background: var(--bg-card);
+  border: 2px dashed var(--accent-soft);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.hero-bonus__stamp {
+  position: absolute;
+  top: -14px;
+  left: 18px;
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 999px;
+  transform: rotate(-8deg);
+  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.02em;
+}
+
+.hero-bonus__lead {
+  margin: 4px 0 18px;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.55;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.hero-bonus__lead-line1,
+.hero-bonus__lead-line2 {
+  display: block;
+}
+.hero-bonus__line-em {
+  color: var(--line-green-deep);
+  margin-left: 2px;
+}
+.hero-bonus__lead-line2 {
+  margin-top: 4px;
+  color: var(--accent-deep);
+  font-size: 22px;
+}
+
+.hero-bonus__offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: left;
+}
+.hero-bonus__offer-text {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.hero-bonus__offer-line1,
+.hero-bonus__offer-line2 {
+  display: inline-block;
+  background: linear-gradient(transparent 62%, #ffe600 62%, #ffe600 92%, transparent 92%);
+  padding: 0 4px;
+  margin-bottom: 4px;
+}
+.hero-bonus__offer-line2 {
+  margin-top: 2px;
+}
+.hero-bonus__num {
+  color: var(--accent-deep);
+  font-size: 1.2em;
+  margin: 0 2px;
+}
+
+.hero-bonus__illust {
+  flex: 0 0 90px;
+  width: 90px;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .hero-bonus {
+    max-width: 460px;
+    padding: 32px 22px 24px;
+  }
+  .hero-bonus__lead {
+    font-size: 21px;
+  }
+  .hero-bonus__lead-line2 {
+    font-size: 25px;
+  }
+  .hero-bonus__offer-text {
+    font-size: 26px;
+  }
+  .hero-bonus__illust {
+    flex-basis: 110px;
+    width: 110px;
+  }
+}
+
+@media (max-width: 374px) {
+  .hero-bonus {
+    padding: 24px 14px 18px;
+  }
+  .hero-bonus__lead {
+    font-size: 17px;
+  }
+  .hero-bonus__lead-line2 {
+    font-size: 19px;
+  }
+  .hero-bonus__offer-text {
+    font-size: 19px;
+  }
+  .hero-bonus__illust {
+    flex-basis: 78px;
+    width: 78px;
+  }
+}
