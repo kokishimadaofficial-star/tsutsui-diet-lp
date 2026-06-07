@@ -5349,7 +5349,36 @@ blockquote.profile__quote cite {
 }
 
 /* ============================================================ */
-/* HERO-BONUS — saga-seitai風 LINE登録特典ブロック               */
+/* HERO-BONUS-BANNER — 完成版画像バナー（v28〜）                  */
+/* ============================================================ */
+
+.hero-bonus-banner {
+  display: block;
+  margin: 26px auto 0;
+  max-width: 380px;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(42, 31, 36, 0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.hero-bonus-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(42, 31, 36, 0.12);
+}
+.hero-bonus-banner picture,
+.hero-bonus-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .hero-bonus-banner { max-width: 460px; margin-top: 32px; }
+}
+
+/* ============================================================ */
+/* HERO-BONUS — saga-seitai風 LINE登録特典ブロック（旧版、参照ゼロだが保持）*/
 /* ============================================================ */
 
 .hero-bonus {
