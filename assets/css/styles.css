@@ -5503,3 +5503,102 @@ blockquote.profile__quote cite {
     width: 78px;
   }
 }
+
+/* ============================================================ */
+/* HERO-LINE-CTA — 緑大型LINE登録ボタン（v30〜、参考: 成裕LP）   */
+/* ============================================================ */
+
+.hero-line-cta {
+  max-width: 380px;
+  margin: 24px auto 16px;
+  text-align: center;
+}
+
+/* 白いピル（上のタグ） */
+.hero-line-cta__tag {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 8px 22px;
+  background: #fff;
+  border: 2px solid var(--line-green);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--line-green-deep);
+}
+
+/* 緑のメインボタン */
+.hero-line-cta__btn {
+  display: block;
+  width: 100%;
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #1bd862 0%, var(--line-green) 50%, var(--line-green-deep) 100%);
+  box-shadow: 0 14px 28px var(--line-green-shadow), inset 0 1px 0 rgba(255,255,255,0.45);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.hero-line-cta__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px var(--line-green-shadow), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+/* ボタン内の上段（小さめ・先着XX名限定） */
+.hero-line-cta__btn-pre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  opacity: 0.97;
+}
+.hero-line-cta__btn-pre .line-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12 2C6.5 2 2 5.6 2 10c0 2.6 1.5 4.9 3.9 6.4-.2.7-.7 2.4-.8 2.8-.1.5.2.5.4.3.2-.1 2.5-1.7 3.5-2.3.7.1 1.4.2 2 .2 5.5 0 10-3.6 10-8s-4.5-7.4-10-7.4z"/></svg>') no-repeat center/contain;
+  flex-shrink: 0;
+}
+.hero-line-cta__btn-em {
+  color: var(--cta-yellow);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: var(--cta-yellow);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  margin: 0 2px;
+}
+
+/* ボタン内の下段（大きめ・メインCTA） */
+.hero-line-cta__btn-main {
+  display: block;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+.hero-line-cta__btn-hl {
+  color: var(--cta-yellow);
+  font-weight: 900;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .hero-line-cta { max-width: 460px; }
+  .hero-line-cta__tag { font-size: 14px; }
+  .hero-line-cta__btn { padding: 26px 28px; border-radius: 26px; }
+  .hero-line-cta__btn-pre { font-size: 17px; }
+  .hero-line-cta__btn-main { font-size: 25px; }
+}
+
+@media (max-width: 374px) {
+  .hero-line-cta__btn { padding: 18px 18px; border-radius: 18px; }
+  .hero-line-cta__btn-pre { font-size: 13px; }
+  .hero-line-cta__btn-main { font-size: 18px; }
+}
