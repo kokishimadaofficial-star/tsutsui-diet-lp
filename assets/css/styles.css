@@ -2310,6 +2310,12 @@ button { font: inherit; }
   .results { padding: 90px 0 90px; }
   .results__title { font-size: 34px; }
   .results__list { grid-template-columns: 1fr 1fr; gap: 24px; }
+  /* 5枚目（奇数最後）が孤立しないよう中央寄せ */
+  .results__list > .results__card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 12px);
+    justify-self: center;
+  }
 }
 @media (min-width: 980px) {
   .results__list { grid-template-columns: repeat(2, 1fr); }
