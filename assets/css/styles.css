@@ -5747,3 +5747,184 @@ blockquote.profile__quote cite {
   .hero-benefits__num { width: 24px; height: 24px; font-size: 12px; }
   .hero-benefits__footer-main { font-size: 13px; }
 }
+
+/* ============================================================ */
+/* HERO-CIRCLES — ダークブラウン×ゴールド 3円ベネフィット (v35)   */
+/* ============================================================ */
+
+.hero-circles {
+  margin: 28px -16px 0;
+  padding: 36px 16px 32px;
+  background: linear-gradient(180deg, #3a2820 0%, #2d1f18 100%);
+  position: relative;
+}
+.hero-circles::before,
+.hero-circles::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(199, 154, 93, 0.6) 50%, transparent 100%);
+}
+.hero-circles::before { top: 14px; }
+.hero-circles::after  { bottom: 14px; }
+
+.hero-circles__lead {
+  margin: 0 0 22px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fdf8ed;
+}
+.hero-circles__lead strong {
+  display: inline-block;
+  margin-left: 4px;
+  color: #c79a5d;
+  font-size: 1.15em;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.hero-circles__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+.hero-circles__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 16px;
+}
+
+/* 数字バッジ：白丸 + ゴールドリング */
+.hero-circles__num {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #c79a5d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.hero-circles__num span {
+  font-size: 14px;
+  font-weight: 900;
+  color: #3a2820;
+  font-family: Georgia, "Noto Serif JP", serif;
+}
+
+/* 大円：オフホワイト + 内容 */
+.hero-circles__card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #fdf8ed 0%, #f0e2c8 100%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(199, 154, 93, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 6px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-circles__icon {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 4px;
+  opacity: 0.7;
+}
+
+.hero-circles__pre {
+  margin: 0 0 2px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #4a3a30;
+  letter-spacing: 0.04em;
+}
+.hero-circles__main {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #c79a5d;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+.hero-circles__sub {
+  margin: 0;
+  font-size: 9.5px;
+  font-weight: 500;
+  color: #6a5847;
+  line-height: 1.35;
+}
+
+/* フッター */
+.hero-circles__footer {
+  margin: 0;
+  padding: 14px 18px;
+  background: rgba(199, 154, 93, 0.12);
+  border: 1px solid rgba(199, 154, 93, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.5;
+}
+.hero-circles__footer-pre {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #c79a5d;
+  margin-bottom: 4px;
+}
+.hero-circles__footer-main {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fdf8ed;
+}
+.hero-circles__footer-main em {
+  color: #c79a5d;
+  font-style: normal;
+  font-size: 1.2em;
+  font-weight: 900;
+  margin: 0 2px;
+}
+
+@media (min-width: 600px) {
+  .hero-circles {
+    margin-inline: auto;
+    max-width: 560px;
+    border-radius: 16px;
+    padding: 44px 28px 38px;
+  }
+  .hero-circles__lead { font-size: 15px; }
+  .hero-circles__list { gap: 14px; }
+  .hero-circles__num { width: 36px; height: 36px; }
+  .hero-circles__num span { font-size: 16px; }
+  .hero-circles__icon { width: 26px; height: 26px; }
+  .hero-circles__pre { font-size: 11px; }
+  .hero-circles__main { font-size: 17px; }
+  .hero-circles__sub { font-size: 11px; }
+  .hero-circles__footer-main { font-size: 16px; }
+}
+
+@media (max-width: 374px) {
+  .hero-circles { margin-inline: -12px; padding: 32px 12px 28px; }
+  .hero-circles__main { font-size: 12px; }
+  .hero-circles__sub { font-size: 8.5px; }
+}
