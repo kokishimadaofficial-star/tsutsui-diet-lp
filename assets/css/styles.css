@@ -5755,7 +5755,7 @@ blockquote.profile__quote cite {
 .hero-circles {
   margin: 28px -16px 0;
   padding: 36px 16px 32px;
-  background: linear-gradient(180deg, #3a2820 0%, #2d1f18 100%);
+  background: linear-gradient(180deg, var(--accent-deep) 0%, #7d2236 100%);
   position: relative;
 }
 .hero-circles::before,
@@ -5765,7 +5765,7 @@ blockquote.profile__quote cite {
   left: 16px;
   right: 16px;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(199, 154, 93, 0.6) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(216, 169, 138, 0.6) 50%, transparent 100%);
 }
 .hero-circles::before { top: 14px; }
 .hero-circles::after  { bottom: 14px; }
@@ -5776,12 +5776,12 @@ blockquote.profile__quote cite {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #fdf8ed;
+  color: #fff;
 }
 .hero-circles__lead strong {
   display: inline-block;
   margin-left: 4px;
-  color: #c79a5d;
+  color: var(--rose-gold);
   font-size: 1.15em;
   font-weight: 900;
   letter-spacing: 0.02em;
@@ -5814,7 +5814,7 @@ blockquote.profile__quote cite {
   height: 32px;
   border-radius: 50%;
   background: #fff;
-  border: 2px solid #c79a5d;
+  border: 2px solid var(--rose-gold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5823,7 +5823,7 @@ blockquote.profile__quote cite {
 .hero-circles__num span {
   font-size: 14px;
   font-weight: 900;
-  color: #3a2820;
+  color: var(--accent-deep);
   font-family: Georgia, "Noto Serif JP", serif;
 }
 
@@ -5832,8 +5832,8 @@ blockquote.profile__quote cite {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background: linear-gradient(180deg, #fdf8ed 0%, #f0e2c8 100%);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(199, 154, 93, 0.3);
+  background: linear-gradient(180deg, #fff7f0 0%, var(--accent-light) 100%);
+  box-shadow: 0 8px 20px rgba(122, 30, 48, 0.30), inset 0 0 0 1px rgba(216, 169, 138, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5854,14 +5854,14 @@ blockquote.profile__quote cite {
   margin: 0 0 2px;
   font-size: 10px;
   font-weight: 700;
-  color: #4a3a30;
+  color: #6a4047;
   letter-spacing: 0.04em;
 }
 .hero-circles__main {
   margin: 0 0 4px;
   font-size: 14px;
   font-weight: 900;
-  color: #c79a5d;
+  color: var(--accent-deep);
   letter-spacing: 0.02em;
   line-height: 1.2;
 }
@@ -5869,7 +5869,7 @@ blockquote.profile__quote cite {
   margin: 0;
   font-size: 9.5px;
   font-weight: 500;
-  color: #6a5847;
+  color: #8a5d65;
   line-height: 1.35;
 }
 
@@ -5877,8 +5877,8 @@ blockquote.profile__quote cite {
 .hero-circles__footer {
   margin: 0;
   padding: 14px 18px;
-  background: rgba(199, 154, 93, 0.12);
-  border: 1px solid rgba(199, 154, 93, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(216, 169, 138, 0.5);
   border-radius: 10px;
   text-align: center;
   line-height: 1.5;
@@ -5888,17 +5888,17 @@ blockquote.profile__quote cite {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #c79a5d;
+  color: var(--rose-gold);
   margin-bottom: 4px;
 }
 .hero-circles__footer-main {
   display: block;
   font-size: 14px;
   font-weight: 800;
-  color: #fdf8ed;
+  color: #fff;
 }
 .hero-circles__footer-main em {
-  color: #c79a5d;
+  color: var(--rose-gold);
   font-style: normal;
   font-size: 1.2em;
   font-weight: 900;
