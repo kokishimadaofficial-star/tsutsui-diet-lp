@@ -4135,9 +4135,9 @@ blockquote.profile__quote cite {
 }
 .empathy__lead {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.95;
+  line-height: 1.85;
   color: var(--ink);
   margin: 0 0 30px;
   letter-spacing: 0.02em;
@@ -4158,7 +4158,7 @@ blockquote.profile__quote cite {
 .empathy__methods li { letter-spacing: 0.04em; }
 .empathy__inner {
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
   font-style: italic;
   color: var(--ink);
@@ -4246,9 +4246,9 @@ blockquote.profile__quote cite {
 }
 .intro__lead {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.85;
+  line-height: 1.75;
   color: var(--ink);
   margin: 0 0 28px;
   letter-spacing: 0.02em;
@@ -4283,7 +4283,7 @@ blockquote.profile__quote cite {
 .intro__signature-main {
   display: block;
   margin-top: 8px;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 900;
   color: var(--accent-deep);
   letter-spacing: 0.04em;
@@ -4384,10 +4384,10 @@ blockquote.profile__quote cite {
 }
 .course__title-main {
   display: block;
-  font-size: 32px;
+  font-size: 25px;
   line-height: 1.35;
   font-weight: 900;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 .course__title-em {
   display: inline-block;
@@ -4531,9 +4531,9 @@ blockquote.profile__quote cite {
   color: #fff;
   font-family: var(--serif);
   font-weight: 800;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
-  padding: 14px 22px 12px;
+  padding: 14px 18px 12px;
   border-radius: 8px;
   margin: 0 0 18px;
   letter-spacing: 0.04em;
