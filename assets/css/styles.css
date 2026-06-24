@@ -4074,7 +4074,7 @@ blockquote.profile__quote cite {
 .unease__title {
   font-family: var(--serif);
   font-weight: 800;
-  font-size: 28px;
+  font-size: 23px;
   line-height: 1.55;
   text-align: center;
   margin: 0 0 30px;
@@ -4121,7 +4121,7 @@ blockquote.profile__quote cite {
 }
 
 @media (min-width: 600px) {
-  .unease__title { font-size: 34px; }
+  .unease__title { font-size: 30px; }
   .unease__title span { font-size: 0.7em; }
   .unease__lead { font-size: 16px; }
   .unease__item { font-size: 17px; padding: 16px 22px; }
@@ -5753,8 +5753,8 @@ blockquote.profile__quote cite {
 /* ============================================================ */
 
 .hero-circles {
-  margin: 28px -16px 0;
-  padding: 36px 16px 32px;
+  margin: 0 -16px;
+  padding: 32px 16px 32px;
   background: linear-gradient(180deg, var(--accent-deep) 0%, #7d2236 100%);
   position: relative;
 }
@@ -5771,34 +5771,34 @@ blockquote.profile__quote cite {
 .hero-circles::after  { bottom: 14px; }
 
 .hero-circles__lead {
-  margin: 0 0 28px;
+  margin: 0 0 24px;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  line-height: 1.5;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
   color: #fff;
-  position: relative;
+  white-space: nowrap;
 }
 .hero-circles__lead::before,
 .hero-circles__lead::after {
   content: "";
   display: inline-block;
-  width: 24px;
+  width: 18px;
   height: 1px;
   background: var(--rose-gold);
   vertical-align: middle;
-  margin: 0 10px;
+  margin: 0 8px;
   opacity: 0.7;
 }
 .hero-circles__lead strong {
-  display: block;
-  margin: 8px 0 0;
+  display: inline-block;
+  margin-left: 6px;
   color: var(--rose-gold);
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 900;
-  letter-spacing: 0.10em;
-  line-height: 1.2;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -5927,10 +5927,10 @@ blockquote.profile__quote cite {
     border-radius: 16px;
     padding: 44px 28px 38px;
   }
-  .hero-circles__lead { font-size: 18px; }
-  .hero-circles__lead strong { font-size: 36px; }
+  .hero-circles__lead { font-size: 17px; }
+  .hero-circles__lead strong { font-size: 28px; }
   .hero-circles__lead::before,
-  .hero-circles__lead::after { width: 32px; margin: 0 14px; }
+  .hero-circles__lead::after { width: 28px; margin: 0 12px; }
   .hero-circles__list { gap: 14px; }
   .hero-circles__num { width: 36px; height: 36px; }
   .hero-circles__num span { font-size: 16px; }
